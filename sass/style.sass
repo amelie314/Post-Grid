@@ -4,6 +4,9 @@ $gray: #434343
 $white: #FFF0F5
 $purple: #70649A
 
+//font
+$header-font-family: "Josefin Sans"
+$body-font-family: "Vidaloka"
 // 版本設定
 *, *:after, *:before 
   -webkit-box-sizing: border-box
@@ -11,8 +14,96 @@ $purple: #70649A
   box-sizing: border-box
   margin: 0
   padding: 0
-  
+  // border: 1px solid black
+
 body
   font-size: 16px
   font-weight: 400
   line-height: 1.5
+h1
+  text-align: center
+  display: block
+  font-size: 40px
+  font-family: Josefin Sans
+  margin-top: 30px
+img
+  height: auto
+  max-width: 100%
+a
+  color: black
+  text-decoration: none
+  font-family: Vidaloka
+  padding: 5px
+  font-size: 18px
+  &:hover 
+    text-decoration: underline
+ 
+// demo
+.wrapper 
+  max-width: 1000px
+  margin-left: auto
+  margin-right: auto
+  //overflow: hidden;
+  padding-top: 1.5em
+  padding-bottom: 1.5em
+  .grid 
+    float: none
+    width: 100%
+    padding-left: 0.2em
+    padding-right: 0.2em
+    padding-bottom: 0.4em
+    .card
+      .card_image
+        -webkit-border-radius: 5px
+        -moz-border-radius: 5px
+        border-radius: 5px
+        display: block
+        min-height: 240px 
+        overflow: hidden
+        position: relative
+        img 
+          display: block
+          margin-bottom: 0          
+          width: 100%
+        .card_all
+          content: ""
+          bottom: 0
+          display: block
+          height: 100%
+          left: 0
+          position: absolute
+          right: 0
+          top: 0
+          width: 100%
+      
+        .card_all_blue
+          background-image: linear-gradient(to bottom, rgba(92, 107, 192, 0.1), rgba(92, 107, 192, 0.6))
+          z-index: 2
+
+
+          .card_all_content
+            position: absolute
+            bottom: 0
+            padding: 1.5em
+            z-index: 3
+            .card_title
+              color: white
+              display: inline-block
+              font-size: 1.8em
+              font-weight: 700
+              line-height: 1.2
+              margin-bottom: 8px
+              text-decoration: none
+            .card_meta,.card_meta_last
+              li
+                color: #f8f8f8
+                display: inline
+              a
+                color: #f8f8f8
+                font-family: $header-font-family
+                
+              
+	
+              
+         
+       
