@@ -30,6 +30,7 @@ a {
   text-decoration: none;
   font-family: Vidaloka;
   padding: 5px;
+  margin-buttom: 10px;
   font-size: 18px;
 }
 a:hover {
@@ -59,10 +60,25 @@ a:hover {
   overflow: hidden;
   position: relative;
 }
-.wrapper .grid .card .card_image img {
+.wrapper .grid .card .card_image > img {
   display: block;
   margin-bottom: 0;
   width: 100%;
+}
+.wrapper .grid .card .card_image:hover > img {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.wrapper .grid .card .card_image .card_all_blue {
+  background-image: linear-gradient(to bottom, rgba(92, 107, 192, 0.3), rgba(92, 107, 192, 0.8));
+  z-index: 2;
+}
+.wrapper .grid .card .card_image .card_all_pink {
+  background-image: linear-gradient(to bottom, rgba(102, 186, 183, 0.1), rgba(102, 186, 183, 0.8));
+  z-index: 2;
 }
 .wrapper .grid .card .card_image .card_all {
   content: "";
@@ -75,17 +91,13 @@ a:hover {
   top: 0;
   width: 100%;
 }
-.wrapper .grid .card .card_image .card_all_blue {
-  background-image: linear-gradient(to bottom, rgba(92, 107, 192, 0.1), rgba(92, 107, 192, 0.6));
-  z-index: 2;
-}
-.wrapper .grid .card .card_image .card_all_blue .card_all_content {
+.wrapper .grid .card .card_image .card_all .card_all_content {
   position: absolute;
   bottom: 0;
   padding: 1.5em;
   z-index: 3;
 }
-.wrapper .grid .card .card_image .card_all_blue .card_all_content .card_title {
+.wrapper .grid .card .card_image .card_all .card_all_content .card_title {
   color: white;
   display: inline-block;
   font-size: 1.8em;
@@ -94,11 +106,17 @@ a:hover {
   margin-bottom: 8px;
   text-decoration: none;
 }
-.wrapper .grid .card .card_image .card_all_blue .card_all_content .card_meta li, .wrapper .grid .card .card_image .card_all_blue .card_all_content .card_meta_last li {
+.wrapper .grid .card .card_image .card_all .card_all_content .card_meta li, .wrapper .grid .card .card_image .card_all .card_all_content .card_meta_last li {
   color: #f8f8f8;
   display: inline;
 }
-.wrapper .grid .card .card_image .card_all_blue .card_all_content .card_meta a, .wrapper .grid .card .card_image .card_all_blue .card_all_content .card_meta_last a {
+.wrapper .grid .card .card_image .card_all .card_all_content .card_meta a, .wrapper .grid .card .card_image .card_all .card_all_content .card_meta_last a {
   color: #f8f8f8;
   font-family: "Josefin Sans";
+}
+@media screen and (min-width: 55.063em) {
+  .wrapper .grid {
+    float: left;
+    width: 33.33%;
+  }
 }

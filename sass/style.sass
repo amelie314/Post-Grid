@@ -34,6 +34,7 @@ a
   text-decoration: none
   font-family: Vidaloka
   padding: 5px
+  margin-buttom: 10px
   font-size: 18px
   &:hover 
     text-decoration: underline
@@ -52,6 +53,7 @@ a
     padding-left: 0.2em
     padding-right: 0.2em
     padding-bottom: 0.4em
+
     .card
       .card_image
         -webkit-border-radius: 5px
@@ -61,10 +63,25 @@ a
         min-height: 240px 
         overflow: hidden
         position: relative
-        img 
+        >img 
           display: block
           margin-bottom: 0          
           width: 100%
+        &:hover > img
+          -webkit-transform: scale(1.2)
+          -moz-transform: scale(1.2)
+          -ms-transform: scale(1.2)
+          -o-transform: scale(1.2)
+          transform: scale(1.2)
+
+        .card_all_blue
+          background-image: linear-gradient(to bottom, rgba(92, 107, 192, 0.3), rgba(92, 107, 192, 0.8))
+          z-index: 2
+
+        .card_all_pink
+          background-image: linear-gradient(to bottom, rgba(102, 186, 183, 0.1), rgba(102, 186, 183, 0.8))
+          z-index: 2  
+        
         .card_all
           content: ""
           bottom: 0
@@ -75,12 +92,6 @@ a
           right: 0
           top: 0
           width: 100%
-      
-        .card_all_blue
-          background-image: linear-gradient(to bottom, rgba(92, 107, 192, 0.1), rgba(92, 107, 192, 0.6))
-          z-index: 2
-
-
           .card_all_content
             position: absolute
             bottom: 0
@@ -101,6 +112,11 @@ a
               a
                 color: #f8f8f8
                 font-family: $header-font-family
+                    
+  @media screen and (min-width: 55.063em)
+    .grid
+      float: left
+      width: 33.33%
                 
               
 	
